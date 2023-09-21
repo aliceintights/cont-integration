@@ -1,6 +1,9 @@
 package org.example;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+
+import javax.swing.*;
+
 public class StatisticsServiceTest {
 
     @Test
@@ -13,5 +16,17 @@ public class StatisticsServiceTest {
         long actual = service.findMax(incomesInBillions);
 
         Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    void findMaxIfElse() {
+        StatisticsService service = new StatisticsService();
+
+        long[] incomesInBillions = {15, 20, 13, 10};
+
+        long expected = 20;
+        long actual = service.findMax(incomesInBillions);
+
+        Assertions.assertEquals(expected,actual);
     }
 }
