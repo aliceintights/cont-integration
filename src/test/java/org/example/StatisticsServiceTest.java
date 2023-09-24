@@ -1,5 +1,6 @@
 package org.example;
 
+import org.junit.Assert;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -27,5 +28,7 @@ public class StatisticsServiceTest {
 
         long expected = 12;
         long actual = service.findMax(incomesInBillions);
+
+        Assertions.assertEquals(expected, actual);
     }
 }
